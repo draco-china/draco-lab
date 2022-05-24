@@ -1,0 +1,3 @@
+{
+  "extends": "@draco/spec/lib/markdownlint"
+}

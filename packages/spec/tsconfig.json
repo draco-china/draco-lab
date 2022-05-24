@@ -1,0 +1,12 @@
+{
+  "extends": "./lib/tsconfig/base.json",
+  "compilerOptions": {
+    "module": "esNext",
+    "target": "es2015",
+    "outDir": "lib",
+    "jsx": "preserve",
+    "jsxFactory": "createElement",
+    "moduleResolution": "node",
+    "baseUrl": "."
+  }
+}

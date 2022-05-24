@@ -1,0 +1,10 @@
+{
+  "extends": "@draco/spec/lib/tsconfig/base.json",
+  "compilerOptions": {
+    "lib": ["ES2015"],
+    "module": "ESNext",
+    "target": "ES6",
+    "jsx": "preserve"
+  },
+  "exclude": ["node_modules"]
+}
