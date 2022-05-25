@@ -1,46 +1,45 @@
 {
-  "name": "draco-design",
-  "version": "0.0.0",
-  "private": true,
-  "workspaces": [
-    "apps/*",
-    "packages/*"
-  ],
-  "scripts": {
-    "build": "turbo run build",
-    "dev": "turbo run dev --parallel",
-    "changeset": "changeset",
-    "changeset:version": "changeset version",
-    "changeset:publish": "changeset publish",
-    "release": "pnpm build && pnpm changeset && pnpm changeset:version && pnpm changeset:publish",
-    "lint": "turbo run lint",
-    "lint-staged": "lint-staged",
-    "lint-staged:js": "eslint --ext .js,.jsx,.ts,.tsx ",
-    "lint:fix": "eslint --fix --cache --ext .js,.jsx,.ts,.tsx --format=pretty ./src && npm run lint:style",
-    "lint:js": "eslint --cache --ext .js,.jsx,.ts,.tsx --format=pretty ./src",
-    "lint:prettier": "prettier --check \"src/**/*\" --end-of-line auto",
-    "lint:style": "stylelint --fix \"**/*.{css,scss,less}\"",
-    "prettier": "prettier -c --write \"src/**/*\""
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged",
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
-    }
-  },
-  "lint-staged": {
-    "**/*.{css,scss,less}": "stylelint",
-    "**/*.{js,jsx,ts,tsx}": "npm run lint-staged:js",
-    "**/*.{js,jsx,tsx,ts,less,md,json}": "prettier --write"
-  },
-  "devDependencies": {
-    "@changesets/cli": "latest",
-    "@draco/spec": "workspace:*",
-    "turbo": "latest"
-  },
-  "engines": {
-    "npm": ">=7.0.0",
-    "node": ">=14.0.0"
-  },
-  "packageManager": "pnpm@7.1.5"
+	"name": "draco-lab",
+	"version": "0.0.0",
+	"workspaces": [
+		"apps/*",
+		"packages/*"
+	],
+	"scripts": {
+		"build": "turbo run build",
+		"dev": "turbo run dev --parallel",
+		"changeset": "changeset",
+		"changeset:version": "changeset version",
+		"changeset:publish": "changeset publish",
+		"release": "pnpm build && pnpm changeset && pnpm changeset:version && pnpm changeset:publish",
+		"lint": "turbo run lint",
+		"lint-staged": "lint-staged",
+		"lint-staged:js": "eslint --ext .js,.jsx,.ts,.tsx ",
+		"lint:fix": "eslint --fix --cache --ext .js,.jsx,.ts,.tsx --format=pretty ./src && npm run lint:style",
+		"lint:js": "eslint --cache --ext .js,.jsx,.ts,.tsx --format=pretty ./src",
+		"lint:prettier": "prettier --check \"src/**/*\" --end-of-line auto",
+		"lint:style": "stylelint --fix \"**/*.{css,scss,less}\"",
+		"prettier": "prettier -c --write \"src/**/*\""
+	},
+	"husky": {
+		"hooks": {
+			"pre-commit": "lint-staged",
+			"commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+		}
+	},
+	"lint-staged": {
+		"**/*.{css,scss,less}": "stylelint",
+		"**/*.{js,jsx,ts,tsx}": "npm run lint-staged:js",
+		"**/*.{js,jsx,tsx,ts,less,md,json}": "prettier --write"
+	},
+	"devDependencies": {
+		"@changesets/cli": "latest",
+		"@draco/spec": "workspace:*",
+		"turbo": "latest"
+	},
+	"engines": {
+		"npm": ">=7.0.0",
+		"node": ">=14.0.0"
+	},
+	"packageManager": "pnpm@7.1.5"
 }

@@ -14,13 +14,7 @@ const TableActionIcon = Icon.createFromIconfontCN({
   scriptUrl: '//at.alicdn.com/t/font_1899388_oxn3zhg34oj.js',
 });
 
-const getTableData = ({
-  current,
-  pageSize,
-}: {
-  current: number;
-  pageSize: number;
-}): Promise<any> => {
+const getTableData = ({ current, pageSize }: { current: number; pageSize: number }): Promise<any> => {
   const query = `page=${current}&size=${pageSize}`;
   return fetch(`https://randomuser.me/api?results=${pageSize}&${query}`)
     .then((res) => res.json())

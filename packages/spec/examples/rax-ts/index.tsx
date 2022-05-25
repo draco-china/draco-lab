@@ -1,8 +1,8 @@
-import { createElement } from "rax";
-import Image from "rax-image";
+import { createElement } from 'rax';
+import Image from 'rax-image';
 
-import "./index.css";
-import "./index.less";
+import './index.css';
+import './index.less';
 
 interface LogoProps {
   uri: string;

@@ -1,10 +1,8 @@
-import { createElement } from "rax";
-import Image from "rax-image";
+import { createElement } from 'rax';
+import Image from 'rax-image';
 
-import "./index.css";
-import "./index.less";
-
-const unusedVar = 1;
+import './index.css';
+import './index.less';
 
 export default (props) => {
   const { uri } = props;
